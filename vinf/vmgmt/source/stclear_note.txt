@@ -1,0 +1,47 @@
+
+===============================================================================
+[ Servers ]
+
+plab
+https://cs-nsx-vc1.csl.vmware.com
+
+pg1
+cs-nsx-pg1.csl.vmware.com
+
+===============================================================================
+[ pyVmomi ]
+
+
+pyvmomi
+https://github.com/vmware/pyvmomi
+
+
+How to run the scripts 
+./get_vm_names.py -s cs-nsx-vc1.csl.vmware.com -u runxinw -p "VMware123"
+
+
+Good example to use pyvmomi to get all vms
+http://vthinkbeyondvm.com/pyvmomi-tutorial-how-to-get-all-the-core-vcenter-server-inventory-objects-and-play-around/
+
+
+
+===============================================================================
+[ The defination of orphaned VMs ]
+
+find out orphaned files
+http://www.lucd.info/2016/09/13/orphaned-files-revisited/
+http://www.lucd.info/2011/04/25/orphaned-files-and-folders-spring-cleaning/
+
+datastore orphaned file
+https://communities.vmware.com/thread/566391
+
+orpahned file on lock
+https://communities.vmware.com/thread/511665
+
+Good scripts, however it doesn't work well as it mistakenly reports VMDK from VMs that have a snapshot.
+https://communities.vmware.com/docs/DOC-6960
+
+script discussion
+http://vmware342.rssing.com/chan-12681196/all_p4690.html
+
+

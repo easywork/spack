@@ -1,0 +1,16 @@
+<firewallDraft name="Exported">
+<layer3Sections>
+<section id="1234" name="Universal Section">
+        <rule id="2147483649" disabled="false" logged="false" managedBy="universalroot-0">
+          <name> Angel</name>
+          <action>allow</action>
+           <appliedTo>
+           <name>ChrisO-Test-ULS</name>
+            <value>universalwire-23</value>
+            <type>VirtualWire</type>
+             <isValid>true</isValid>
+            </appliedTo>
+</rule>
+</section>
+</layer3Sections>
+</firewallDraft>

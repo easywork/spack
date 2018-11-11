@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "FirewallRule" table = "firewallrule">
+      
+      <meta attribute = "class-description">
+         This class contains the firewall detail. 
+      </meta>
+      
+      <id name = "ruleId" type = "int" column = "ruleId">
+         <!-- <generator class="native"/> -->
+      </id>
+      
+      <property name = "sectionId" column = "sectionId" type = "string"/>
+      <property name = "name" column = "name" type = "string"/>
+      <property name = "action" column = "action" type = "string"/>
+      
+   </class>
+</hibernate-mapping>
+
+

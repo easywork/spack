@@ -1,0 +1,163 @@
+MD_NAS_A01
+ip_second_tor
+MD_Win2k12R2_DC_A01
+ip_nsx_edge01
+NSX_Controller_8c82b04c-4b48-4059-8541-ba56dd3b6981
+DB-UPSA-VXLAN
+COS-test-no OS
+RW_ET-stdgw
+StefanUpsaR
+DB-Linux-Server-3
+Repro-VM
+et-bfd1
+PW-debian9.1_other
+et-oracle-client
+New Template
+ET-IBM-ESX2
+vcva.roundtable.nsxt
+StefanESG-0
+ET-stdgw
+VitensRepro-0
+MD_Border-Router-A01
+ET-IBM-ESX3
+DB-NSX-l2vpn-client-Xlarge
+et-oracle-server
+COS_Template
+ET-IBM-VC
+DB-Linux-Server-2
+mgr.roundtable.nsxt
+esx1.roundtable.nsxt
+et-bfd2
+DB-BareMetal-NSXT-EDGE-2.3
+edge3.roundtable.nsxt
+ESG---0
+NSXT-servicenode
+SSL VPN test
+controller2.roundtable.nsxt
+COS-Quadria-dupIP
+AM-UPSA109x64-VM01
+IPsecVPN-0
+COS-CallQueueMonitor-Backup
+ubuntu-xenial-16.04-cloudimg
+NSX_Controller_fa6620ac-5bdf-4d95-8ab3-2b3121282276
+NSX_Controller_c2ff4692-608e-45ad-b642-6264c91c9ba0
+COS-UPSA3
+DB-Bridge-Itadel-0
+et-hwvtep-1
+powerc_l2_brige-0
+DB-TelefonicavShieldManager
+DB-UPSA-VLAN
+RW-UPSA1
+Quadria_controller-15
+ET-IBM-MGR
+UPSA5-perf
+test_static_bindings-0
+Repro-TMDS
+COS TDC NSX Manager
+ET-IBM-GW1
+COS-deploy-test
+UPSA1-perf
+et-limits
+Stefan UPSAServer
+ip-ESGBGPCheck02-0
+et-opengrok
+COS-UPSA1
+COS - Varian - NSX Manager
+COS-Bridge-0
+ESg-LB-Fabien-0
+cc-arista-1
+DLR-ING
+COS - Varian - NSX Manager - clone
+et-stretch
+I can change from here-0
+ET-W2K8R2
+UPSA7-perf
+COS-Quadria-UPSA
+kvm1.roudtable.nsxt
+ip-ESGBGPCheck01-0
+ET-rrdtest-0
+AM-UPSA109x64-VM02
+Destination-UPSA
+vp_test01
+cc-upsa-vxlan
+cc-upsa-vlan-680
+controller3.roundtable.nsxt
+MD_ESXI_A04_PROD
+DBS-Bridge-0
+COS-Banco-Route
+DB-Linux-Server
+COS Quadria NSX Manager 6.3.2
+TFN_VCNS_Restore
+UPSA-TEST3
+BGP_advert-0
+MD_ESXI_A03_MGMT
+COS-CallQueueMonitor
+MD_ESXI_A06_PROD
+MD_NSX_MGR_A01
+TDC-NSX-Truncate-Clone
+ET-Summary
+SSL-VPN EDGE-0
+AO-TestVM
+powerc_upsa_vc1-2
+COS-test
+DB-VSE-CSC
+et-magicedge
+NSX_18748823703
+VLAN_3154_dev_backup_10.147.154.0%2f24_Agility-0
+NSX Manager-TDC-01-17-2017
+RW_ESG_Ext-0
+Conor_test
+esx2.roundtable.nsxt
+COS-Banco-1
+ET-IBM-ESX4
+RW_ubuntu_dev
+COS-NSX-Manager-623
+RW_ubuntu_Web
+DC
+esx4.roundtable.nsxt
+RW-NSX6.3.1-Passwd-Reset
+UPSA3-perf
+ET-IBM-ESX1
+COS-Quadria-dupIP1
+COS-UPSA-5
+idm.roundtable.nsxt
+Stefan UPSAClient
+COS vShield Manager
+COS-UPSA4
+MD_VCSA_A01
+COS-UPSA2
+MD_ESXI_A02_MGMT
+Test-0
+MD_ESXI_A05_PROD
+pw-deleteme123
+COS-Test-1
+COS-NSX-640
+COS UPSA FTP
+PW-SSLv3-0
+UPSA4-perf
+Test_1-0
+et-upsavc1
+LB-Fk-upsa
+edge1.roundtable.nsxt
+COS-test-powercli-no-OS
+RW-UPSA2
+cc-l2vpn-server-0
+COS-Banco-2
+MD_ESXI_A01_MGMT
+edge2.roundtable.nsxt
+SSL VPN Test Pnet
+et-kvm1
+et-tdc-gw1
+EDGE-ING
+et-IBM-Gateway-backup
+esx3.roundtable.nsxt
+ip-DLRBGPCheck-0
+PW-Bridge-0
+et-tmp
+powerc_upsa_vc1
+NSX Manager-TDC-01-17-2017-Clone
+PW-server-1
+UPSA2-perf
+controller1.roundtable.nsxt
+UPSA6-perf
+Linux-Server

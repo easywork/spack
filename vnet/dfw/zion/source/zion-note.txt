@@ -1,0 +1,170 @@
+
+My github account
+https://github.com/easywork/zion.git
+
+
+
+
+=========================================================================================
+[ ubuntu Eclipse ]
+
+how to install Eclipse EE Java on Ubuntu16.04
+https://askubuntu.com/questions/81341/install-eclipse-ide-for-java-ee-dev-via-apt-get-is-it-possible
+
+
+Completely remove eclipse
+# sudo apt-get purge eclipse*
+# apt-get remove eclipse eclipse-platform
+# rm -r ~/.eclipse/
+
+Install openjdk on ubuntu 6.04
+https://askubuntu.com/questions/761127/how-do-i-install-openjdk-7-on-ubuntu-16-04-or-higher
+
+How to create Eclipse Lanunch on ubuntu
+http://donovanbrown.com/post/Adding-Eclipse-to-Launcher-on-Ubuntu-1604
+
+Create a folder structure in eclipse without maven
+* https://stackoverflow.com/questions/22914927/creating-a-src-main-java-folder-structure-in-eclipse-without-maven
+
+Install pydev
+* http://codingtip.blogspot.com/2012/04/how-to-install-eclipse-and-pydev-for.html
+* http://pydev.org/updates 
+* If the pydev is not compatible, it needs to find out right version for the eclipse, for example eclipse3.8 work with pydev4.5.5
+* The pydev versions can be found on this link, copy to the installation URL: pydev - pydev - http://www.pydev.org/update_sites/4.5.5/
+http://www.pydev.org/update_sites/
+
+
+=========================================================================================
+[sql ]
+
+# first time login to psql without password
+http://www.postgresqltutorial.com/postgresql-reset-password/
+
+
+# assign superuser role to securall
+alter role secureall with superuser;
+
+# psql is not case senstitive
+
+
+create database dfw_rules;
+\c dfw_rules;
+create schema test1;
+
+CREATE TABLE firewallrule (
+    ruleId int primary key,
+    sectionId varchar(20) NOT NULL,
+    name varchar(20),
+    action  varchar(20) NOT NULL
+);
+
+
+
+=========================================================================================
+[ github ]
+
+My github account
+https://github.com/easywork/zion.git
+
+
+Note that git doesn't add empty folder
+
+=========================================
+[ git add all recent change ]
+
+git add all change to the remote
+# git add --all
+# git push --all
+
+or 
+
+# git add .
+# git push -u origin master
+
+=========================================
+[ git get the change from master ]
+
+# git pull origin master
+
+
+=========================================
+[ git add in clipse project ]
+* create a eclipse project
+* copy in all the files from the git project
+* go back to git project, remove all, commit and push
+-- git remove *
+-- git commit -m 
+-- git push -u origin master
+* add back in all files from the eclipse project to git project
+-- note that, remember to copy in .classpath .project .setting from eclipse project
+* git all, commit, push
+
+
+
+=========================================================================================
+[ Hibernate ]
+
+Link
+https://www.tutorialspoint.com/hibernate/hibernate_persistent_classes.htm
+
+
+Hibernate works best if the POJO programming model is applied, POJO classes usually placed in com.xxx.domain. Below are the requirements, however, none of these rules are hard requirements:
+
+* It must has a default constructor.
+* It must has an value can be used as primary key (ID) when mapping to database
+* All attributes that will be persisted should be declared private and have getXXX and setXXX methods defined in the JavaBean style.
+* A central feature of Hibernate, proxies, depends upon the persistent class being either non-final, or the implementation of an interface that declares all public methods.
+
+=========================================
+[ hibernate.cfg.xml ]
+
+
+     <property name = "hibernate.dialect">
+         org.hibernate.dialect.PostgreSQLDialect
+      </property>
+      
+      <property name = "hibernate.connection.driver_class">
+         org.postgresql.Driver
+      </property>
+      
+<property name = "hibernate.connection.username">secureall</property>
+      
+<property name = "hibernate.connection.password">VMware123</property>
+
+<property name="connection_pool_size">5</property>
+
+* To specify the DB name after the localhost, it also needs to specify the DB type, namely postgresql 
+<property name = "hibernate.connection.url">jdbc:postgresql://localhost/testdb://localhost/testdb</property>
+      
+* List of XML mapping files 
+<mapping resource = "FirewallRule.hbm.xml"/>
+
+
+=========================================
+[ <classname>.hbm.xml ]
+
+
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "FirewallRule" table = "firewallrule">
+      
+      <meta attribute = "class-description">
+         This class contains the firewall detail. 
+      </meta>
+      
+      <id name = "ruleId" type = "int" column = "ruleId">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "sectionId" column = "sectionId" type = "string"/>
+      <property name = "name" column = "name" type = "string"/>
+      <property name = "action" column = "action" type = "string"/>
+      
+   </class>
+</hibernate-mapping>
+
+
