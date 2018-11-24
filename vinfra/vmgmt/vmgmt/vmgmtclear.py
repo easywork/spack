@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+
+# ==================================================
+# @author: Runxin runxinw@vmware.com
+#
+
 import sys, getopt
 import vmgmtbase
 import vmgmtstorage

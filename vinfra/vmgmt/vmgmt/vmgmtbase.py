@@ -1,8 +1,6 @@
-'''
-Created on 11 Nov 2018
-
-@author: rwang
-'''
+# ==================================================
+# @author: Runxin runxinw@vmware.com
+#
 
 #from pyVim.connect import SmartConnectNoSSL, Disconnect
 from pyVim.connect import SmartConnect, Disconnect

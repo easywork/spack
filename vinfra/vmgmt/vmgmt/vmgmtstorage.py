@@ -1,8 +1,6 @@
-'''
-Created on 11 Nov 2018
-
-@author: rwang
-'''
+# ==================================================
+# @author: Runxin runxinw@vmware.com
+#
 
 import os 
 from os.path import isfile, isdir, join
