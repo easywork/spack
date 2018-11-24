@@ -1,2 +1,2 @@
-import vmgmtbase
-import vmgmtstorage
+import vmg_inventory
+import vmg_dstore

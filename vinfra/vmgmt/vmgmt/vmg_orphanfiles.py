@@ -5,8 +5,8 @@
 #
 
 import sys, getopt
-import vmgmtbase
-import vmgmtstorage
+import vmg_inventory
+import vmg_dstore
 
 def _getopt():
     try:
@@ -52,23 +52,23 @@ def _usage():
 
 # Start program
 def main(server, user, password, store):
-
-    results = []    
-
-    inventory_mgr = vmgmtbase.InventoryManager(server,user,password)
+    # The return results
+    results = []  
+    # the inventory    
+    inventory_mgr = vmg_inventory.InventoryManager(server,user,password)
     inventory_mgr.connect_server()
     vm_objects = inventory_mgr.get_all_vms()
     vm_names = vm_objects.values()
    
-    files = vmgmtstorage.get_files(store)
+    files = vmg_dstore.get_files(store)
  
     for filename in files:
         orphan = True
         for vmname in vm_names:
-          if filename.find(vmname) != -1:
-              print "skip VM file " + filename
-              orphan = False
-              break
+            if filename.find(vmname) != -1:
+                print "skip VM file " + filename
+                orphan = False
+                break
         if orphan == True:
             results.append(filename)
 
