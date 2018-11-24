@@ -4,7 +4,8 @@ Created on 11 Nov 2018
 @author: rwang
 '''
 
-from pyVim.connect import SmartConnectNoSSL, Disconnect
+#from pyVim.connect import SmartConnectNoSSL, Disconnect
+from pyVim.connect import SmartConnect, Disconnect
 from pyVmomi import vim
 
 '''
@@ -37,9 +38,11 @@ class InventoryManager():
      
         try:
             if self.port != None:
-                self.session = SmartConnectNoSSL(host=self.host,user=self.user,pwd=self.password,port=int(self.port))
+                #self.session = SmartConnectNoSSL(host=self.host,user=self.user,pwd=self.password,port=int(self.port))
+                self.session = SmartConnect(host=self.host, user=self.user, pwd=self.password, port=int(self.port))
             else:
-                self.session = SmartConnectNoSSL(host=self.host,user=self.user,pwd=self.password) 
+                #self.session = SmartConnectNoSSL(host=self.host,user=self.user,pwd=self.password) 
+                self.session = SmartConnect(host=self.host, user=self.user, pwd=self.password, port=443)
         
         except vim.fault.InvalidLogin:
         #except:
@@ -56,7 +59,7 @@ class InventoryManager():
 
         container = self.content.viewManager.CreateContainerView(self.content.rootFolder, vimtype, True)
         for managed_object_ref in container.view:
-                vms.update({managed_object_ref: managed_object_ref.name})
+                vms.update({managed_object_ref:managed_object_ref.name})
         return vms
              
 """

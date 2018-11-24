@@ -5,10 +5,9 @@ Created on 11 Nov 2018
 '''
 
 import os 
-
+from os.path import isfile, isdir, join
 
 def get_all_files(dpath):
-    from os.path import isfile, isdir, join
     array = []
     dirs = []
 
@@ -32,10 +31,19 @@ def get_all_files(dpath):
             array.extend(t)
         return array  
 
+def get_files(dpath):
+    array = []
+    for f in os.listdir(dpath):
+	if f.startswith('.'):
+	    continue
+        array.append(f)
+    return array 
+
 
 if __name__ == '__main__':
     
-    dpath = '/home/rwang/workspace/gssnsx/spack'
-    array = get_all_files(dpath)
+    import sys
+    dpath = sys.argv[1]
+    array = get_files(dpath)
     print array
         
