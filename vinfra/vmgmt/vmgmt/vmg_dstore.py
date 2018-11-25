@@ -32,9 +32,9 @@ def get_all_files(dpath):
 def get_files(dpath):
     array = []
     for f in os.listdir(dpath):
-	if f.startswith('.'):
-	    continue
-        array.append(f)
+        if f.startswith('.'):
+            continue
+            array.append(f)
     return array 
 
 

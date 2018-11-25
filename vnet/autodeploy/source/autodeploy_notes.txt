@@ -1,0 +1,21 @@
+https://github.com/easywork/spack.git
+
+python ./vmg_orphanfile.py -s 10.27.44.26 -u runxinw -p "VMware123" -d /vmfs/volumes/VNX5700_2/
+
+10.27.10.10 -- cs-tse10
+10.27.44.26 -- VC1
+10.27.44.30 -- NSX1
+/vmfs/volumes/VNX5700_2/rwang_test
+
+curl -i -k -u "admin:VMware123" -X GET 'https://10.27.44.30/api/2.0/vdn/switches'
+
+python reuqestion basic auth
+https://stackoverflow.com/questions/26745462/python-request-basic-auth-doesnt-work
+
+XML Element tree
+https://stackoverflow.com/questions/47280129/parsing-xml-using-python-elementtree
+./vdsContexts/vdsContext/switch/objectId
+
+Deploy ova using python
+https://stackoverflow.com/questions/24352982/is-it-possible-to-deploy-ovf-on-esx-using-python
+https://github.com/vmware/pyvmomi/issues/532
