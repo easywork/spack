@@ -5,13 +5,13 @@
 #from pyVim.connect import SmartConnectNoSSL, Disconnect
 from pyVim.connect import SmartConnect, Disconnect
 from pyVmomi import vim
+import os
+from os.path import isfile, isdir, join
 
 '''
 Refs:
 http://vthinkbeyondvm.com/pyvmomi-tutorial-how-to-get-all-the-core-vcenter-server-inventory-objects-and-play-around/
 '''
-
-MAX_DEPTH = 10
 
 class InventoryManager():
     
@@ -85,3 +85,35 @@ class InventoryManager():
                 for vm in vmlist:
                     self.printvminfo(vm)
 """
+
+def get_all_files(dpath):
+    array = []
+    dirs = []
+
+    for f in os.listdir(dpath):
+        
+        # ignore the hidden file
+        if f.startswith('.'):
+            continue
+        
+        fullname = join(dpath,f)
+        if isfile(fullname):
+            array.append(f)
+        elif isdir(fullname):
+            dirs.append(fullname)
+    
+    if len(dirs) == 0:
+        return array
+    else:
+        for d in dirs:
+            t = get_all_files(d)
+            array.extend(t)
+        return array  
+
+def get_files(dpath):
+    array = []
+    for f in os.listdir(dpath):
+        if f.startswith('.'):
+            continue
+        array.append(f)
+    return array 

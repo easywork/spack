@@ -5,8 +5,8 @@
 #
 
 import sys, getopt
-import vmg_inventory
-import vmg_dstore
+import vmg_inventory as inventory
+#import vmg_dstore
 
 def _getopt():
     try:
@@ -55,12 +55,12 @@ def main(server, user, password, store):
     # The return results
     results = []  
     # the inventory    
-    inventory_mgr = vmg_inventory.InventoryManager(server,user,password)
+    inventory_mgr = inventory.InventoryManager(server,user,password)
     inventory_mgr.connect_server()
     vm_objects = inventory_mgr.get_all_vms()
     vm_names = vm_objects.values()
    
-    files = vmg_dstore.get_files(store)
+    files = inventory.get_files(store)
  
     for filename in files:
         orphan = True
